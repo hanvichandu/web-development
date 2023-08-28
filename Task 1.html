@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Job Application Form</title>
+  <script>
+    function validateForm() {
+      var fullName = document.forms["applicationForm"]["full_name"].value;
+      var email = document.forms["applicationForm"]["email"].value;
+      var phone = document.forms["applicationForm"]["phone"].value;
+      
+      if (fullName == "" || email == "" || phone == "" ) {
+        alert("Please fill in all required fields.");
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Accenture Hiring Form</h1>
+  <form name="applicationForm" action="/submit_application" method="post" onsubmit="return validateForm()">
+    <label for="full_name">Full Name:</label>
+    <input type="text" id="full_name" name="full_name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required><br><br>
+    
+    Enter your Adress:<br/>
+    <br/>
+    <textarea rows="3" cols="25"></textarea>
+    <br/>
+    Desired Position:<br/>
+    <input type="radio" name="position" value="position">Team Lead<br/>
+    <input type="radio" name="position" value="position">Manager<br/>
+    <input type="radio" name="position" value="position">HR<br/>
+    <input type="radio" name="position" value="position">employee<br/>
+    </br>
+    <p></p>
+    <h3>Education and Qualifications:</h3>
+    <lable for="name">Enter Your University/Institute Name: </lable>
+    <input type="text" id="name"  placeholder="Eg:MITS University"><br/>
+    <p></p>
+    Field of Study:<br>
+    <select name="dropdown">
+        <option value="BSC">Bsc</option>
+        <option value="B.Tech">B.Tech</option>
+        <option value="M.Tech">M.Tech</option>
+        <option value="Diploma">Diploma</option>
+    </select>
+    <br/>
+    <p></p>
+    Graduation Year:<br/>
+    <input type="radio" name="year" value="year">2025<br/>
+    <input type="radio" name="year" value="year">2024<br/>
+    <input type="radio" name="year" value="year">2023<br/>
+    <input type="radio" name="year" value="year">2022<br/>
+    <input type="radio" name="year" value="year">2021<br/>
+    <input type="radio" name="year" value="year">2020<br/>
+    <input type="radio" name="year" value="year">other<br/>
+    <p></p>
+    Work Experience:<br>
+    <select name="dropdown">
+        <option value="Fresher">Fresher</option>
+        <option value="1 year">1 year</option>
+        <option value="2 years">2 years</option>
+        <option value="3 years">3 years</option>
+        <option value="4 years">4 years</option>
+        <option value="5/5+years">5 / 5+ years</option>
+    </select>
+    <br/>
+    <p></p>
+    Laguage Proficiency:<br/>
+    <input type="checkbox" >English<br/>
+    <input type="checkbox" >Telugu<br/>
+    <input type="checkbox" >Hindi<br/>
+    <input type="checkbox" >Tamil<br/>
+    <br/>
+    <p></p>
+    Technical skills:<br/>
+    <input type="checkbox" >MicrosoftExcel/word<br/>
+    <input type="checkbox" >Full Stack WebDevelopment<br/>
+    <input type="checkbox" >pyhton<br/>
+    <input type="checkbox" >Java<br/>
+    <br/>
+    <p></p>
+    Expected Salary per Month:
+    <input type="number"  placeholder="Eg:Rs 50000"><br/>
+    <br/>
+    <p></p>
+    <lable for="file">Upload Resume/cv: </lable><br/>
+    <br/>
+    <input type="File" id="file"><br/>
+    <p></p>
+    <input type="submit" value="Submit Application">
+    <input type="reset" value="Reset">
+  </form>
+</body>
+</html>
